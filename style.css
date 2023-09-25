@@ -1,66 +1,93 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap');
 
-*{
+* {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
 
-#button{
-  width: 50px;
-  height: 50px;
-  background-color: black;
-  cursor: pointer;
+body{
+  display: flex;
 }
 
-#container{
+.container {
+  width: 200px;
   height: 100vh;
-  width: 16vw;
-  box-shadow: 5px 0 30px rgb(196, 196, 196);
-  border-radius: 0 5px 5px 0;
+  box-shadow: 5px 0 30px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   transition: .2s;
+  
 }
 
-nav{
-  position: relative; 
-  width: 100vw;
+.expand{
+  width: 60px;
 }
 
-nav ul {
+.expand:hover{
+  width: 200px;
+}
+
+.menu, .sub-menu{
   list-style-type: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
 }
 
-ul li a{
+.menu .selected{
+  background-color: rgba(0, 0, 0, 0.06);
+  color: rgb(31, 120, 255);
+}
+
+.menu-item a {
   text-decoration: none;
-  border-radius: 5px;
-  margin: 10px 10px;
-  padding: 10px 20px;
-  color: rgb(78, 78, 78);
+  color: rgb(68, 68, 68);
+  display: flex;
+  align-items: center;
+  margin: 10px 8px;
+  padding: 10px 0;
   transition: .2s;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  border-radius: 5px;
 }
 
- ul li a .icon{
-  white-space: nowrap; 
-  margin-right: 20px; 
-  width: 30px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-} 
-
-a:hover{
-  background-color: rgb(243, 243, 243);
-  color: rgb(71, 114, 255);
+.sub-menu-item > a{
+  padding: 5px 15px;
 }
 
+.menu a i {
+  margin: 0 20px 0 10px;
+  font-size: 24px;
+}
+
+.menu a:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+  color: rgb(31, 120, 255);
+}
+
+#menu-button {
+  font-size: 30px;
+  cursor: pointer;
+  position: relative;
+  left: 15px;
+  transition: .2s;
+}
+
+#menu-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.text-menu-item {
+  transition: opacity .3s ease;
+}
+
+.arrow{
+  transition: .3s;
+}
+
+.arrow-expand{
+  transform: rotate(180deg);
+}
+
+.sub-menu{
+  margin: 0 10px;
+  display: none;
+  transition: all .3s ease;
+
+}

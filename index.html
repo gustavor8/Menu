@@ -1,50 +1,70 @@
-<!-- comentario teste para ver se deu certo-->
-<!-- comentario teste 2-->
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <title>Navigation Drawer</title>
 
   <link rel="stylesheet" href="style.css">
-  <link href="https://css.gg/css" rel="stylesheet" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
-  <div id="container">
-    <div id="button"></div>
+  
+  <div class="container">
     <nav>
-      <ul>
-        <li>
+      <span id="menu-button">
+        <i class='bx bx-menu'></i>
+      </span>
+
+      <ul class="menu">
+        <li class="menu-item">
           <a href="#">
-            <span class="icon"><i class="gg-home-alt"></i></span>
-            <span>Dashboard</span>
+            <i class='bx bx-home-alt'></i>
+            <span class="text-menu-item">Dashboard</span>
+            <i class='arrow bx bx-chevron-down'></i>
+          </a>
+          <ul class="sub-menu">
+            <li class="sub-menu-item"><a href="#">Item 1</a></li>
+            <li class="sub-menu-item"><a href="#">Item 2</a></li>
+            <li class="sub-menu-item"><a href="#">Item 3</a></li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <a href="#">
+            <i class='bx bx-layer'></i>
+            <span class="text-menu-item">Projects</span>
           </a>
         </li>
-        <li>
+        <li class="menu-item">
           <a href="#">
-            <span class="icon"><i class="gg-home-alt"></i></span>
-            <span>Product</span>
+            <i class='bx bx-pie-chart-alt-2'></i>
+            <span class="text-menu-item">Reporting</span>
+            <i class='arrow bx bx-chevron-down'></i>
           </a>
+          <ul class="sub-menu">
+            <li class="sub-menu-item"><a href="#">Item 1</a></li>
+            <li class="sub-menu-item"><a href="#">Item 2</a></li>
+            <li class="sub-menu-item"><a href="#">Item 3</a></li>
+          </ul>
         </li>
-        <li>
+        <li class="menu-item">
           <a href="#">
-            <span class="icon"><i class="gg-user"></i></span>
-            <span>Users</span>
+            <i class='bx bx-cart'></i>
+            <span class="text-menu-item">Cart</span>
           </a>
-        </li>
-        <li>
-          <a href="#">
-            <span class="icon"><i class="gg-home-alt"></i></span>
-            <span>Orders</span>
-          </a>
+          
         </li>
       </ul>
     </nav>
   </div>
-
+  <div class="main">
+    Container
+  </div>
+  
+  
   <script src="script.js"></script>
+  
 </body>
 
 </html>
